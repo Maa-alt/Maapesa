@@ -1,0 +1,364 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Global body and background */
+body {
+  background-image: url('./image/image2.jpg'); /* Corrected path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+}
+
+/* App container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px #000000;
+  background-color: #6e706e80;
+}
+
+/* Header */
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Marquee replacement */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 10s linear infinite;
+  font-size: 2.5em; /* Increased font size */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Navigation styles */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a,
+.nav-button {
+  text-decoration: none;
+  color: white;
+  font-weight: bold; /* Make text bold */
+  padding: 10px 15px; /* Ensure the same padding for height */
+  line-height: 1.5; /* Adjust line height for consistent height */
+  border: 2px solid #10d42a;
+  border-radius: 5px;
+  background: transparent; /* Ensure button has a transparent background */
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover,
+.nav-button:hover {
+  color: #fff;
+  background-color: #1caa1c80;
+  border-color: #60e59c;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+  padding: 10px;
+  font-size: 1.2em; /* Increased font size */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  font-size: 1.2em; /* Increased font size */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1caa1c80;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1caa1c80;
+}
+
+/* Table styling for product list */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1.1em; /* Increased font size */
+}
+
+.product-table th {
+  background-color: #1caa1c80;
+  color: white; /* Set header text color to white */
+  padding: 10px; /* Add some padding for aesthetics */
+  font-size: 1.2rem; /* Increase font size */
+  text-align: left; /* Optional: Align text to the left */
+
+}
+
+.product-table tbody tr:nth-child(even) {
+  background-color: transparent;
+
+}
+
+.product-table tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+.product-table td {
+  color:white;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #1caa1c80;
+}
+
+.product-table tr:hover {
+  background-color: transparent;
+}
+
+/* General text and color settings */
+h2,
+h3 {
+  color: white;
+  font-size: 1.8em; /* Increased font size */
+}
+
+.actions {
+  display: flex;
+  gap: 10px; 
+}
+
+.actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #1caa1c80;;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2em; /* Increased font size */
+}
+
+.actions button:hover {
+  background-color: #1caa1c80; /* Darker shade on hover */
+}
+
+/* Style for the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+/* Table header styles */
+.styled-table thead th {
+  background-color: #1caa1c80; /* Header background color */
+  color: white; /* Header text color */
+  padding: 10px;
+  font-size: 1.2em; /* Increased font size */
+}
+
+/* Table body styles */
+.styled-table tbody tr {
+  background-color: transparent; /* Default row background color */
+}
+
+.styled-table tbody tr:hover {
+  background-color: transparent; /* Hover effect for rows */
+}
+
+.styled-table tbody td {
+  color: white; /* Change text color to white */
+  padding: 10px;
+  font-size: 1.1em; /* Increased font size */
+}
+
+
+.error {
+  color: red;
+  font-size: 1.1em; /* Increased font size */
+}
+
+.success {
+  color: green;
+  font-size: 1.1em; /* Increased font size */
+}
+/* src/App.css or a specific CSS file for UserManagement component */
+
+.user-management button {
+  margin: 0 5px; /* Add horizontal space between all buttons */
+  padding: 8px 12px; /* Add some padding to the buttons */
+  background-color: #1caa1c80; /* Optional: button background color */
+  color: white; /* Optional: button text color */
+  border: none; /* Remove default button border */
+  border-radius: 4px; /* Optional: rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.user-management button:hover {
+  background-color: #1caa1c80; /* Darker shade on hover */
+}
+
+/* Additional styles for specific button actions */
+.action-button {
+  margin-left: 10px; /* Space between buttons */
+}
+
+.user-form {
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  background-color: #37f576;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Adjust padding to match nav height */
+  cursor: pointer;
+  font-size: 1.2em; /* Increased font size */
+}
+
+.bold-white {
+  font-weight: bold;
+  color: white;
+}
+.success-message {
+  color: green;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.user-management table {
+  width: 100%; /* Make the table full width */
+  border-collapse: collapse; /* Collapse borders into a single border */
+}
+
+.user-management th,
+.user-management td {
+  border: 1px solid #ccc; /* Add a light gray border */
+  padding: 10px; /* Add some padding */
+  text-align: left; /* Align text to the left */
+}
+
+.user-management th {
+  background-color: #1f961f80;
+  color: white;
+}
+
+/* Optional: Style for the username column */
+.username {
+  color: white;           /* Set text color to white */
+  font-size: 18px;       /* Increase font size */
+  
+}
+/* Error message styling */
+.error {
+  color: #f44336;
+  margin-top: 10px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for better spacing */
+  text-align: left; /* Align text to the left */
+  color: white; /* Set text color to white for both headers and cells */
+}
+
+.table th {
+  background-color: #3aec3a80; /* Header background color */
+  font-size: 1.2rem; /* Header font size */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: transparent; /* Zebra striping effect for even rows */
+}
+
+.table tbody tr:hover {
+  background-color: transparent; /* Highlight effect on hover */
+}
+/* src/App.css or a specific CSS file for the Dashboard component */
+
+/* Image gallery styles */
+.image-gallery {
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  align-items: center;     /* Center images vertically */
+  overflow: hidden;        /* Hide overflow if necessary */
+  margin: 20px 0;         /* Margin around the gallery */
+}
+
+/* Individual product image styles */
+.product-image {
+  width: 90%;              /* Set width to 80% of the container */
+  max-width: 500px;       /* Set a maximum width */
+  height: auto;           /* Maintain aspect ratio */
+  border-radius: 8px;     /* Optional: rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  transition: transform 0.3s; /* Smooth zoom effect on hover */
+}
+
+.product-image:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+
+.username {
+  color: white;           /* Set text color to white */
+  font-size: 18px;       /* Increase font size */
+}
+
+.user-management {
+
+  padding: 20px;            /* Add some padding */
+  border-radius: 8px;       /* Optional: Rounded corners */
+}
